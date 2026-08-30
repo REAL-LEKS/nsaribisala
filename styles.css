@@ -400,26 +400,21 @@ a.ccard:hover{ transform:translateY(-4px); border-color:var(--gold); box-shadow:
 .footer{ border-top:1px solid var(--line); padding:34px 0; background:var(--paper-2); }
 
 .credit{
-  display:flex; flex-wrap:wrap; gap:26px; align-items:center; justify-content:space-between;
-  padding:24px 26px; margin-bottom:26px;
-  background:var(--card); border:1px solid var(--line); border-radius:var(--r);
+  display:flex; flex-wrap:wrap; align-items:center; gap:7px;
+  margin-top:18px; padding-top:16px; border-top:1px solid var(--line);
+  font-size:12.2px; line-height:1.5; color:var(--ink-faint);
+  column-gap:20px; row-gap:4px;
 }
-.credit__brand{ display:flex; align-items:center; gap:14px; }
 .credit__mark{
-  display:grid; place-items:center; width:44px; height:44px; border-radius:11px; flex:0 0 auto;
+  display:grid; place-items:center; width:21px; height:21px; border-radius:6px; flex:0 0 auto;
   background:var(--accent); color:var(--gold-soft);
-  font-family:var(--serif); font-size:14.5px; letter-spacing:.06em;
+  font-family:var(--serif); font-size:9px; letter-spacing:.05em; margin-right:2px;
 }
 [data-theme="dark"] .credit__mark{ background:#233043; }
-.credit__label{ font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); }
-.credit__name{ font-family:var(--serif); font-size:1.14rem; letter-spacing:.02em; color:var(--ink); margin-top:2px; }
-
-.credit__meta{ display:flex; flex-wrap:wrap; gap:12px 38px; }
-.credit__meta li{ display:flex; flex-direction:column; gap:3px; }
-.credit__key{ font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); }
-.credit__val{ font-size:14.2px; color:var(--ink-soft); word-break:break-word; }
-a.credit__val{ color:var(--gold); border-bottom:1px solid transparent; transition:.2s; }
-a.credit__val:hover{ border-bottom-color:var(--gold); }
+.credit strong{ font-weight:600; color:var(--ink-soft); letter-spacing:.03em; }
+.credit__item{ white-space:nowrap; }
+.credit a{ color:var(--gold); border-bottom:1px solid transparent; transition:.2s; }
+.credit a:hover{ border-bottom-color:var(--gold); }
 
 .footer__inner{ display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between; font-size:13.4px; color:var(--ink-faint); }
 .footer__note{ letter-spacing:.06em; }
