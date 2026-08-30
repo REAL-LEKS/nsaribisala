@@ -179,7 +179,11 @@ cite{ font-style:italic; }
 .btn--solid:hover{ transform:translateY(-2px); box-shadow:var(--shadow-l); }
 .btn--ghost{ border-color:var(--line); color:var(--ink); }
 .btn--ghost:hover{ border-color:var(--gold); color:var(--gold); transform:translateY(-2px); }
-.btn--lg{ padding:16px 30px; font-size:15.5px; margin-top:44px; }
+.btn--lg{ padding:16px 30px; font-size:15.5px; }
+
+.btn--wa{ background:#25d366; color:#0b2e1a; box-shadow:var(--shadow); }
+.btn--wa:hover{ background:#1fbd5a; color:#062210; transform:translateY(-2px); box-shadow:var(--shadow-l); }
+.btn .ico-wa{ fill:currentColor; stroke:none; width:18px; height:18px; }
 
 .stats{
   display:grid; grid-template-columns:repeat(4,1fr); gap:8px;
@@ -411,6 +415,9 @@ a.ccard:hover{ transform:translateY(-4px); border-color:var(--gold); box-shadow:
 .ccard svg{ width:19px; height:19px; fill:none; stroke:var(--gold); stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; margin-bottom:8px; }
 .ccard__label{ font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); }
 .ccard__value{ font-size:14.6px; word-break:break-word; }
+.ccard__hint{ font-size:11.8px; color:var(--gold); margin-top:2px; }
+
+.contact__actions{ display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:44px; }
 
 /* ───────────── FOOTER ───────────── */
 .footer{ border-top:1px solid var(--line); padding:34px 0; background:var(--paper-2); }
@@ -490,12 +497,13 @@ a.ccard:hover{ transform:translateY(-4px); border-color:var(--gold); box-shadow:
 
 @media (max-width:430px){
   .stats{ grid-template-columns:1fr; }
-  .hero__cta .btn{ width:100%; justify-content:center; }
+  .hero__cta .btn,
+  .contact__actions .btn{ width:100%; justify-content:center; }
 }
 
 /* ───────────── PRINT ───────────── */
 @media print{
-  .nav,.footer__top,.filters,.hero__cta,.theme-toggle,.hero__rule{ display:none !important; }
+  .nav,.footer__top,.filters,.hero__cta,.contact__actions,.theme-toggle,.hero__rule{ display:none !important; }
   body{ background:#fff; color:#000; font-size:11pt; }
   .section{ padding:18px 0; break-inside:avoid; }
   .tl__card,.card,.conf{ box-shadow:none; border:1px solid #ccc; break-inside:avoid; }
